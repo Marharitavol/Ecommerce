@@ -45,7 +45,7 @@ class HeaderView: UIView {
         addSubview(headerButton)
         headerButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            headerButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -33),
+            headerButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -27),
             headerButton.centerYAnchor.constraint(equalTo: self.centerYAnchor)
         ])
     }

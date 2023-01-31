@@ -23,6 +23,8 @@
 		5CDF828C29852EDE001242F5 /* ModelForMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDF828B29852EDE001242F5 /* ModelForMainVC.swift */; };
 		5CDF828F29858D4C001242F5 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDF828E29858D4C001242F5 /* SearchCell.swift */; };
 		5CEDD8662985A59300615C3B /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEDD8652985A59300615C3B /* Extension.swift */; };
+		5CEDD86829870D4200615C3B /* HotSalesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEDD86729870D4200615C3B /* HotSalesCollectionView.swift */; };
+		5CEDD86A2987122A00615C3B /* HotSaleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEDD8692987122A00615C3B /* HotSaleCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		5CDF828B29852EDE001242F5 /* ModelForMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelForMainVC.swift; sourceTree = "<group>"; };
 		5CDF828E29858D4C001242F5 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		5CEDD8652985A59300615C3B /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		5CEDD86729870D4200615C3B /* HotSalesCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotSalesCollectionView.swift; sourceTree = "<group>"; };
+		5CEDD8692987122A00615C3B /* HotSaleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotSaleCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,13 +84,15 @@
 				5C700DDF29817C1C004E3344 /* SceneDelegate.swift */,
 				5C700DE129817C1C004E3344 /* MainViewController.swift */,
 				5C700DF42981B09C004E3344 /* CollectionTableViewCell.swift */,
+				5C700DF62981BE10004E3344 /* TileCollectionViewCell.swift */,
+				5CDF828229840CA4001242F5 /* HeaderView.swift */,
+				5CDF828E29858D4C001242F5 /* SearchCell.swift */,
 				5CDF828D29852FF4001242F5 /* Model */,
 				5CDF828429852C2E001242F5 /* Service */,
-				5C700DF62981BE10004E3344 /* TileCollectionViewCell.swift */,
-				5CDF828E29858D4C001242F5 /* SearchCell.swift */,
-				5CDF828229840CA4001242F5 /* HeaderView.swift */,
-				5CEDD8642985A56400615C3B /* Extension */,
+				5CEDD86729870D4200615C3B /* HotSalesCollectionView.swift */,
+				5CEDD8692987122A00615C3B /* HotSaleCollectionViewCell.swift */,
 				5C700DE329817C1C004E3344 /* Main.storyboard */,
+				5CEDD8642985A56400615C3B /* Extension */,
 				5C700DE929817C1D004E3344 /* Assets.xcassets */,
 				5C700DEB29817C1D004E3344 /* LaunchScreen.storyboard */,
 				5C700DEE29817C1D004E3344 /* Info.plist */,
@@ -193,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C700DF72981BE10004E3344 /* TileCollectionViewCell.swift in Sources */,
+				5CEDD86829870D4200615C3B /* HotSalesCollectionView.swift in Sources */,
 				5CDF828F29858D4C001242F5 /* SearchCell.swift in Sources */,
 				5C700DF52981B09C004E3344 /* CollectionTableViewCell.swift in Sources */,
 				5CEDD8662985A59300615C3B /* Extension.swift in Sources */,
@@ -203,6 +210,7 @@
 				5C700DE829817C1C004E3344 /* Ecommerce.xcdatamodeld in Sources */,
 				5CDF828829852CC2001242F5 /* NetworkDataFetcher.swift in Sources */,
 				5CDF828C29852EDE001242F5 /* ModelForMainVC.swift in Sources */,
+				5CEDD86A2987122A00615C3B /* HotSaleCollectionViewCell.swift in Sources */,
 				5C700DE029817C1C004E3344 /* SceneDelegate.swift in Sources */,
 				5CDF828329840CA4001242F5 /* HeaderView.swift in Sources */,
 			);

@@ -34,9 +34,6 @@ class SearchCell: UITableViewCell {
 
     }
     
-    override func layoutSubviews() {
-    }
-    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
