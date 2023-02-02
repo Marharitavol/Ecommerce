@@ -144,7 +144,7 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
         case 0:
             return 70
         case 2:
-            return 30
+            return 49
         default:
             return 0
         }

@@ -42,7 +42,7 @@ class SearchCell: UITableViewCell {
         qrButton.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(qrButton)
         NSLayoutConstraint.activate([
-            qrButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -37),
+            qrButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -27),
             qrButton.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
             qrButton.heightAnchor.constraint(equalToConstant: 34),
             qrButton.widthAnchor.constraint(equalToConstant: 34)
@@ -52,7 +52,7 @@ class SearchCell: UITableViewCell {
         contentView.addSubview(searchBar)
         NSLayoutConstraint.activate([
             searchBar.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
-            searchBar.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 32),
+            searchBar.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 17),
             searchBar.trailingAnchor.constraint(equalTo: qrButton.leadingAnchor, constant: -11),
             searchBar.heightAnchor.constraint(equalToConstant: 34)
         ])

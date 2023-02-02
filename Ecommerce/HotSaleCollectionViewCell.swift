@@ -29,8 +29,8 @@ class HotSaleCollectionViewCell: UICollectionViewCell {
     
     let picture: UIImageView = {
         let picture = UIImageView()
-        picture.contentMode = .scaleAspectFit
-        picture.backgroundColor = .green
+        picture.layer.cornerRadius = 10
+        picture.clipsToBounds = true
         return picture
     }()
     
@@ -46,7 +46,6 @@ class HotSaleCollectionViewCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        contentView.backgroundColor = .orangeMain
         setupLayout()
     }
     
@@ -60,10 +59,9 @@ class HotSaleCollectionViewCell: UICollectionViewCell {
         picture.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             picture.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 15),
-            picture.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -21),
-            picture.heightAnchor.constraint(equalToConstant: 182),
+            picture.heightAnchor.constraint(equalToConstant: 185),
             picture.topAnchor.constraint(equalTo: contentView.topAnchor),
-            picture.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
+            picture.widthAnchor.constraint(equalToConstant: contentView.bounds.width - 25),
         ])
         
         addSubview(title)
@@ -92,9 +90,13 @@ class HotSaleCollectionViewCell: UICollectionViewCell {
         ])
     }
     
-    func configure(with model: HomeStore) {
-        title.text = model.title
+    func configure(with model: HomeStore, indexPath: IndexPath) {
+        picture.downloaded(from: model.picture, contentMode: .scaleAspectFill)
+        if indexPath.row == 1 {
+            title.text = ""
+        } else {
+            title.text = model.title
+        }
         subtitle.text = model.subtitle
-        
     }
 }

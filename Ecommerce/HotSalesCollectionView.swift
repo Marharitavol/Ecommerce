@@ -21,12 +21,10 @@ class HotSalesCollectionView: UITableViewCell, UICollectionViewDataSource, UICol
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 2, right: 0)
-//        layout.minimumLineSpacing = 15
         let collectionView = UICollectionView(frame: .zero,
                                               collectionViewLayout: layout)
         collectionView.register(HotSaleCollectionViewCell.self, forCellWithReuseIdentifier: HotSaleCollectionViewCell.identifier)
         collectionView.showsHorizontalScrollIndicator = false
-//        collectionView.contentInset.left = 15
         return collectionView
     }()
     
@@ -63,7 +61,7 @@ class HotSalesCollectionView: UITableViewCell, UICollectionViewDataSource, UICol
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HotSaleCollectionViewCell.identifier, for: indexPath) as! HotSaleCollectionViewCell
-        cell.configure(with: saleViewModels[indexPath.row])
+        cell.configure(with: saleViewModels[indexPath.row], indexPath: indexPath)
         return cell
     }
     

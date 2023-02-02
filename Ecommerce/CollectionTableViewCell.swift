@@ -27,7 +27,7 @@ class CollectionTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColl
         collectionView.register(TileCollectionViewCell.self, forCellWithReuseIdentifier: TileCollectionViewCell.identifier)
         collectionView.backgroundColor = .systemBackground
         collectionView.showsHorizontalScrollIndicator = false
-        collectionView.contentInset.left = 27
+        collectionView.contentInset.left = 17
         return collectionView
     }()
     
