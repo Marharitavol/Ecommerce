@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C661A86298BF17B00EF6FAE /* BestSellerCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C661A85298BF17B00EF6FAE /* BestSellerCollectionView.swift */; };
+		5C661A88298BF19400EF6FAE /* BestSellerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C661A87298BF19400EF6FAE /* BestSellerViewCell.swift */; };
 		5C700DDE29817C1C004E3344 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C700DDD29817C1C004E3344 /* AppDelegate.swift */; };
 		5C700DE029817C1C004E3344 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C700DDF29817C1C004E3344 /* SceneDelegate.swift */; };
 		5C700DE229817C1C004E3344 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C700DE129817C1C004E3344 /* MainViewController.swift */; };
@@ -28,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5C661A85298BF17B00EF6FAE /* BestSellerCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestSellerCollectionView.swift; sourceTree = "<group>"; };
+		5C661A87298BF19400EF6FAE /* BestSellerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestSellerViewCell.swift; sourceTree = "<group>"; };
 		5C700DDA29817C1C004E3344 /* Ecommerce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ecommerce.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C700DDD29817C1C004E3344 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C700DDF29817C1C004E3344 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +65,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C661A89298D9F1300EF6FAE /* HotSalesSection */ = {
+			isa = PBXGroup;
+			children = (
+				5CEDD86729870D4200615C3B /* HotSalesCollectionView.swift */,
+				5CEDD8692987122A00615C3B /* HotSaleCollectionViewCell.swift */,
+			);
+			path = HotSalesSection;
+			sourceTree = "<group>";
+		};
 		5C700DD129817C1C004E3344 = {
 			isa = PBXGroup;
 			children = (
@@ -89,8 +102,9 @@
 				5CDF828E29858D4C001242F5 /* SearchCell.swift */,
 				5CDF828D29852FF4001242F5 /* Model */,
 				5CDF828429852C2E001242F5 /* Service */,
-				5CEDD86729870D4200615C3B /* HotSalesCollectionView.swift */,
-				5CEDD8692987122A00615C3B /* HotSaleCollectionViewCell.swift */,
+				5C661A89298D9F1300EF6FAE /* HotSalesSection */,
+				5C661A85298BF17B00EF6FAE /* BestSellerCollectionView.swift */,
+				5C661A87298BF19400EF6FAE /* BestSellerViewCell.swift */,
 				5C700DE329817C1C004E3344 /* Main.storyboard */,
 				5CEDD8642985A56400615C3B /* Extension */,
 				5C700DE929817C1D004E3344 /* Assets.xcassets */,
@@ -203,9 +217,11 @@
 				5CDF828F29858D4C001242F5 /* SearchCell.swift in Sources */,
 				5C700DF52981B09C004E3344 /* CollectionTableViewCell.swift in Sources */,
 				5CEDD8662985A59300615C3B /* Extension.swift in Sources */,
+				5C661A86298BF17B00EF6FAE /* BestSellerCollectionView.swift in Sources */,
 				5CDF828629852C4E001242F5 /* NetworkService.swift in Sources */,
 				5C700DE229817C1C004E3344 /* MainViewController.swift in Sources */,
 				5C700DDE29817C1C004E3344 /* AppDelegate.swift in Sources */,
+				5C661A88298BF19400EF6FAE /* BestSellerViewCell.swift in Sources */,
 				5CDF828A29852E6A001242F5 /* DataFetcherService.swift in Sources */,
 				5C700DE829817C1C004E3344 /* Ecommerce.xcdatamodeld in Sources */,
 				5CDF828829852CC2001242F5 /* NetworkDataFetcher.swift in Sources */,

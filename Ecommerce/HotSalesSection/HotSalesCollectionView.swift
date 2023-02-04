@@ -20,6 +20,7 @@ class HotSalesCollectionView: UITableViewCell, UICollectionViewDataSource, UICol
     private let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
+        layout.minimumLineSpacing = 1
         layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 2, right: 0)
         let collectionView = UICollectionView(frame: .zero,
                                               collectionViewLayout: layout)

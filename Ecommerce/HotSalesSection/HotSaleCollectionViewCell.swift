@@ -55,7 +55,7 @@ class HotSaleCollectionViewCell: UICollectionViewCell {
     
     func setupLayout() {
         
-        addSubview(picture)
+        contentView.addSubview(picture)
         picture.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             picture.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 15),
@@ -64,7 +64,7 @@ class HotSaleCollectionViewCell: UICollectionViewCell {
             picture.widthAnchor.constraint(equalToConstant: contentView.bounds.width - 25),
         ])
         
-        addSubview(title)
+        contentView.addSubview(title)
         title.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             title.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 32),
@@ -72,7 +72,7 @@ class HotSaleCollectionViewCell: UICollectionViewCell {
             title.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 68)
         ])
         
-        addSubview(subtitle)
+        contentView.addSubview(subtitle)
         subtitle.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             subtitle.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 32),
@@ -80,7 +80,7 @@ class HotSaleCollectionViewCell: UICollectionViewCell {
             subtitle.topAnchor.constraint(equalTo: title.bottomAnchor, constant: 5)
         ])
         
-        addSubview(button)
+        contentView.addSubview(button)
         button.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             button.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 32),

@@ -16,6 +16,9 @@ class MainViewController: UIViewController {
     
     private let dataFetcherService = DataFetcherService()
     var mainVCInfo = [HotSalesTableViewCellViewModel]()
+    var bestSellerInfo = [BestSellerViewCellViewModel]()
+    
+    var sizeOfSection3 = Int()
     
     private let viewModels: [CollectionTableViewCellViewModel] = [
         CollectionTableViewCellViewModel(
@@ -29,6 +32,9 @@ class MainViewController: UIViewController {
             ]
         )
     ]
+    
+//    var calcHeight = Int()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -48,6 +54,7 @@ class MainViewController: UIViewController {
         tableView.register(HotSalesCollectionView.self, forCellReuseIdentifier: HotSalesCollectionView.identifier)
         tableView.register(CollectionTableViewCell.self, forCellReuseIdentifier: CollectionTableViewCell.identifier)
         tableView.register(SearchCell.self, forCellReuseIdentifier: SearchCell.identifier)
+        tableView.register(BestSellerCollectionView.self, forCellReuseIdentifier: BestSellerCollectionView.identifier)
   
     }
     
@@ -64,8 +71,9 @@ class MainViewController: UIViewController {
         dataFetcherService.fetchData { answer in
             guard let answer = answer else { return }
             let hotSalesModel = HotSalesTableViewCellViewModel(saleViewModels: answer.home_store)
-            
+            let bestseller = BestSellerViewCellViewModel(bestSellerViewModel: answer.best_seller)
             self.mainVCInfo = [hotSalesModel]
+            self.bestSellerInfo = [bestseller]
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
@@ -75,13 +83,15 @@ class MainViewController: UIViewController {
 
 extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return 4
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
             return viewModels.count
         } else if section == 2 {
             return mainVCInfo.count
+        } else if section == 3 {
+            return bestSellerInfo.count
         } else {
             return 1
         }
@@ -96,21 +106,30 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
                 for: indexPath) as? CollectionTableViewCell else { fatalError() }
             cell.configure(with: viewModel)
             return cell
+            
         } else if indexPath.section == 1 {
             guard let cell = tableView.dequeueReusableCell(
                 withIdentifier: SearchCell.identifier,
                 for: indexPath) as? SearchCell else { fatalError() }
             cell.backgroundColor = UIColor(red: 0.898, green: 0.898, blue: 0.898, alpha: 1)
             return cell
-        } else
-//        if indexPath.section == 2
-        {
+            
+        } else if indexPath.section == 2 {
             let model = mainVCInfo[indexPath.row]
             
             guard let cell = tableView.dequeueReusableCell( withIdentifier: HotSalesCollectionView.identifier,
                 for: indexPath) as? HotSalesCollectionView else { return UITableViewCell() }
             cell.backgroundColor = UIColor(red: 0.898, green: 0.898, blue: 0.898, alpha: 1)
             cell.configuree(with: model)
+            return cell
+            
+        } else {
+            let model = bestSellerInfo[indexPath.row]
+            guard let cell = tableView.dequeueReusableCell( withIdentifier: BestSellerCollectionView.identifier,
+                for: indexPath) as? BestSellerCollectionView else { return UITableViewCell() }
+            cell.backgroundColor = UIColor(red: 0.898, green: 0.898, blue: 0.898, alpha: 1)
+            cell.configureebestSeller(with: model)
+            sizeOfSection3 = cell.bestSellerViewModel.count
             return cell
         }
     }
@@ -121,8 +140,11 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
             return 95
         } else if indexPath.section == 1 {
             return 35
-        } else {
+        } else if indexPath.section == 2 {
             return 185
+        } else {
+            let size = 185 * sizeOfSection3 / 2
+            return CGFloat(size)
         }
     }
     
@@ -134,8 +156,9 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
         } else if section == 2 {
             let view = HeaderView(title: "Hot Sales", buttonTitle: "see more")
             return view
-        } else  {
-            return nil
+        } else {
+            let view = HeaderView(title: "Best Seller", buttonTitle: "see more")
+            return view
         }
     }
 
@@ -146,7 +169,7 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
         case 2:
             return 49
         default:
-            return 0
+            return 46
         }
     }
 }
