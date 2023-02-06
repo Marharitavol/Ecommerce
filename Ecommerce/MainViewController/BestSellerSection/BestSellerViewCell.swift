@@ -56,17 +56,6 @@ class BestSellerViewCell: UICollectionViewCell {
         return button
     }()
     
-//    let button: UIButton = {
-//        let button = UIButton(type: .system)
-//        button.layer.cornerRadius = 5
-//        button.setTitle("Buy now!", for: .normal)
-//        button.tintColor = UIColor.labelMain
-//        button.backgroundColor = .white
-//        button.titleLabel?.font = .systemFont(ofSize: 11, weight: .semibold)
-//        return button
-//    }()
-    
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupLayout()
@@ -123,15 +112,6 @@ class BestSellerViewCell: UICollectionViewCell {
             likeButton.widthAnchor.constraint(equalToConstant: 25),
             likeButton.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 11)
         ])
-        
-//        addSubview(button)
-//        button.translatesAutoresizingMaskIntoConstraints = false
-//        NSLayoutConstraint.activate([
-//            button.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 32),
-//            button.heightAnchor.constraint(equalToConstant: 23),
-//            button.widthAnchor.constraint(equalToConstant: 98),
-//            button.topAnchor.constraint(equalTo: price.bottomAnchor, constant: 26)
-//        ])
     }
     
     func configure(with model: BestSeller, indexPath: IndexPath) {
