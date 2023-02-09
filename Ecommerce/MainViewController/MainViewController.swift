@@ -59,7 +59,9 @@ class MainViewController: UIViewController {
     }
     
     @objc func addTapped() {
-        print("tap")
+        let vc = SheetViewController()
+        self.present(vc, animated: true, completion: nil)
+
     }
     
     override func viewDidLayoutSubviews() {

@@ -21,6 +21,8 @@
 		5C700DED29817C1D004E3344 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C700DEB29817C1D004E3344 /* LaunchScreen.storyboard */; };
 		5C700DF52981B09C004E3344 /* CollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C700DF42981B09C004E3344 /* CollectionTableViewCell.swift */; };
 		5C700DF72981BE10004E3344 /* TileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C700DF62981BE10004E3344 /* TileCollectionViewCell.swift */; };
+		5CC1F53B299296C400AE645F /* SheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC1F53A299296C400AE645F /* SheetViewController.swift */; };
+		5CC1F53D2994272100AE645F /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC1F53C2994272100AE645F /* FilterView.swift */; };
 		5CDF828329840CA4001242F5 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDF828229840CA4001242F5 /* HeaderView.swift */; };
 		5CDF828629852C4E001242F5 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDF828529852C4E001242F5 /* NetworkService.swift */; };
 		5CDF828829852CC2001242F5 /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDF828729852CC2001242F5 /* NetworkDataFetcher.swift */; };
@@ -49,6 +51,8 @@
 		5C700DEE29817C1D004E3344 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C700DF42981B09C004E3344 /* CollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTableViewCell.swift; sourceTree = "<group>"; };
 		5C700DF62981BE10004E3344 /* TileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileCollectionViewCell.swift; sourceTree = "<group>"; };
+		5CC1F53A299296C400AE645F /* SheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetViewController.swift; sourceTree = "<group>"; };
+		5CC1F53C2994272100AE645F /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
 		5CDF828229840CA4001242F5 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		5CDF828529852C4E001242F5 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		5CDF828729852CC2001242F5 /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
@@ -102,6 +106,8 @@
 				5C700DDD29817C1C004E3344 /* AppDelegate.swift */,
 				5C700DDF29817C1C004E3344 /* SceneDelegate.swift */,
 				5CC1F5382991903700AE645F /* MainViewController */,
+				5CC1F53A299296C400AE645F /* SheetViewController.swift */,
+				5CC1F53C2994272100AE645F /* FilterView.swift */,
 				5CDF828229840CA4001242F5 /* HeaderView.swift */,
 				5CDF828E29858D4C001242F5 /* SearchCell.swift */,
 				5CDF828D29852FF4001242F5 /* Model */,
@@ -245,6 +251,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CC1F53D2994272100AE645F /* FilterView.swift in Sources */,
 				5C700DF72981BE10004E3344 /* TileCollectionViewCell.swift in Sources */,
 				5CEDD86829870D4200615C3B /* HotSalesCollectionView.swift in Sources */,
 				5CDF828F29858D4C001242F5 /* SearchCell.swift in Sources */,
@@ -263,6 +270,7 @@
 				5CDF828829852CC2001242F5 /* NetworkDataFetcher.swift in Sources */,
 				5CDF828C29852EDE001242F5 /* ModelForMainVC.swift in Sources */,
 				5CEDD86A2987122A00615C3B /* HotSaleCollectionViewCell.swift in Sources */,
+				5CC1F53B299296C400AE645F /* SheetViewController.swift in Sources */,
 				5C700DE029817C1C004E3344 /* SceneDelegate.swift in Sources */,
 				5CDF828329840CA4001242F5 /* HeaderView.swift in Sources */,
 			);

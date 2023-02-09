@@ -14,7 +14,6 @@ class TabBarController: UITabBarController {
         super.viewDidLoad()
         generateTabBar()
         setTabBarAppearance()
-        
     }
     
     override func viewDidLayoutSubviews() {
@@ -48,6 +47,7 @@ class TabBarController: UITabBarController {
         navController.tabBarItem = item
         navController.navigationBar.scrollEdgeAppearance = navController.navigationBar.standardAppearance
         navController.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        
         return navController
     }
     
