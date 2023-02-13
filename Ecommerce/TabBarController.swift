@@ -10,8 +10,13 @@ import UIKit
 
 class TabBarController: UITabBarController {
     
+    var coordinator: Coordinator = MainCoordinator()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        coordinator.tabBarController = self
+        
         generateTabBar()
         setTabBarAppearance()
     }
@@ -21,8 +26,11 @@ class TabBarController: UITabBarController {
     }
     
     private func generateTabBar() {
+        let mainViewController = MainViewController()
+        mainViewController.coordinator = coordinator
+        
         viewControllers = [
-            generateVCTextItem(viewController: MainViewController(), title: "Explorer"),
+            generateVCTextItem(viewController: mainViewController, title: "Explorer"),
             generateVC(viewController: CartViewController(), image: UIImage(systemName: "cart")),
             generateVC(viewController: FavoriteViewController(), image: UIImage(systemName: "heart")),
             generateVC(viewController: MainViewController(), image: UIImage(systemName: "person"))

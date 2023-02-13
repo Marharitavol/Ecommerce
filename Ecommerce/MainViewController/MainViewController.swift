@@ -7,7 +7,8 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, Coordinating {
+    var coordinator: Coordinator?
     
     private let tableView: UITableView = {
         let table = UITableView(frame: .zero, style: .grouped)
@@ -59,9 +60,7 @@ class MainViewController: UIViewController {
     }
     
     @objc func addTapped() {
-        let vc = SheetViewController()
-        self.present(vc, animated: true, completion: nil)
-
+        coordinator?.eventOccured(with: .buttonTapped)
     }
     
     override func viewDidLayoutSubviews() {
@@ -175,4 +174,3 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
         }
     }
 }
-

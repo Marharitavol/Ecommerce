@@ -8,7 +8,8 @@
 import Foundation
 import UIKit
 
-class SheetViewController: UIViewController, UISheetPresentationControllerDelegate {
+class SheetViewController: UIViewController, UISheetPresentationControllerDelegate, Coordinating {
+    var coordinator: Coordinator?
     
     lazy var stackView = UIStackView(arrangedSubviews: [brandSection, priceSection, sizeSection])
     let brandSection = FilterView(optionTitle: "Brand", title: "Samsung")
@@ -113,3 +114,4 @@ class SheetViewController: UIViewController, UISheetPresentationControllerDelega
         ])
     }
 }
+
